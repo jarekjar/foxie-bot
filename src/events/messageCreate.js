@@ -19,7 +19,7 @@ const messageJson = [
   },
   {
     match: 'fortnite',
-    response: 'https://media2.giphy.com/media/RJAjTowsU0K1a/giphy.gif',
+    fileResponse: 'https://media2.giphy.com/media/RJAjTowsU0K1a/giphy.gif',
   },
 ]
 
