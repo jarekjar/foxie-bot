@@ -1,34 +1,21 @@
 const { Events } = require('discord.js')
+const fs = require('node:fs')
 
-const messageJson = [
-  {
-    match: 'not not',
-    response: 'Nice Try.',
-  },
-  {
-    match: 'not a furry',
-    response: 'Correct!',
-  },
-  {
-    match: 'furry',
-    response: 'He is NOT a furry!',
-  },
-  {
-    match: 'baby',
-    fileResponse: 'https://i.imgur.com/FEfzYwy.png',
-  },
-  {
-    match: 'fortnite',
-    fileResponse: 'https://media2.giphy.com/media/RJAjTowsU0K1a/giphy.gif',
-  },
-]
+const getJson = () => {
+  try {
+    return JSON.parse(fs.readFileSync('./src/json/message.json', 'utf8'))
+  } catch (err) {
+    console.error(err)
+    return {};
+  }
+}
 
 module.exports = {
   name: Events.MessageCreate,
   async execute(interaction) {
     if (interaction.author.bot) return
     try {
-      const match = Object.values(messageJson).find((val) =>
+      const match = Object.values(getJson()).find((val) =>
         interaction?.content?.toLowerCase()?.includes(val?.match)
       )
       if (match) {

@@ -1,0 +1,34 @@
+[
+  {
+    "match": "not not",
+    "response": "Nice Try."
+  },
+  {
+    "match": "not a furry",
+    "response": "Correct!"
+  },
+  {
+    "match": "furry",
+    "response": "He is NOT a furry!"
+  },
+  {
+    "match": "baby",
+    "fileResponse": "https://i.imgur.com/FEfzYwy.png"
+  },
+  {
+    "match": "fortnite",
+    "fileResponse": "https://media2.giphy.com/media/RJAjTowsU0K1a/giphy.gif"
+  },
+  {
+    "match": "sir foxie",
+    "response": "Show feet. 🦶"
+  },
+  {
+    "match": "foxie",
+    "response": "You will address me as \"sir\"."
+  },
+  {
+    "match": "peepee",
+    "response": "nice"
+  }
+]
